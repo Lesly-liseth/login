@@ -59,7 +59,7 @@ public class LoginForm extends JDialog{
     private User getAuthenticationUser(String email, String password){
         User user =null;
 
-        final String DB_URL="jdbc:mysql://localhost/farmacia?serverTimezone=UTC";
+        final String DB_URL="jdbc:mysql://127.0.0.1/farmacia?serverTimezone=UTC";
         final String USERNAME="cualquiera";
         final String PASSWORD="";
 
