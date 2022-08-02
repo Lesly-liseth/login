@@ -62,6 +62,7 @@ public class LoginForm extends JDialog{
         final String DB_URL="jdbc:mysql://localhost/farmacia?serverTimezone=UTC";
         final String USERNAME="root";
         final String PASSWORD="";
+        
 
         try{
             Connection conn= DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
