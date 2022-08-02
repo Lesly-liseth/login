@@ -4,15 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-
-
 public class LoginForm extends JDialog{
     private JTextField emailTF;
     private JPasswordField passwordTF;
     private JButton cancelButton;
     private JButton OKButton;
     private JPanel loginPanel;
-
+    public User user;
     public LoginForm (JFrame parent){
         super(parent);
         setTitle("Login");
@@ -21,15 +19,15 @@ public class LoginForm extends JDialog{
         setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        //setDefaultLookAndFeelDecorated();
-        setVisible(true);
+        setDefaultLookAndFeelDecorated(true);
+        //setVisible(true);
 
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String email=emailTF.getText();
                 String password=String.valueOf(passwordTF.getPassword());
-
+                System.out.println("boton ok");
                 user=getAuthenticationUser(email,password);
 
                 if (user!=null){
@@ -45,51 +43,71 @@ public class LoginForm extends JDialog{
 
             }
         });
+
+
         cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println("boton cancel");
                 dispose();
             }
         });
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        LoginForm loginForm=new LoginForm(null);
 
-    }
-
-    public User user;
     private User getAuthenticationUser(String email, String password){
         User user =null;
 
-        final String DB_URL="jdbc:mysql://localhost/mitienda?serverTimezone=UTC";
-        final String USERNAME="rooT";
+        final String DB_URL="jdbc:mysql://localhost/farmacia?serverTimezone=UTC";
+        final String USERNAME="root";
         final String PASSWORD="";
 
         try{
-
             Connection conn= DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
-            Statement stnt = conn.createStatement();
-            String sql = "SELECT * FROM users WHERE email =? AND password =?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            Statement stmt= conn.createStatement();
+            String sql="SELECT * FROM usuario WHERE EMAIL=? AND CONTRASEÑA=?";
+            PreparedStatement preparedStatement=conn.prepareStatement(sql);
             preparedStatement.setString(1,email);
             preparedStatement.setString(2,password);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
+            System.out.println("conexion ok");
+            ResultSet resultSet=preparedStatement.executeQuery();
 
             if(resultSet.next()){
-                user = new User();
-                /*user.nombre = resultSet.getString(nombre);
-                user.email = resultSet.getString(email);
-                user.direccion = resultSet.getString(direccion);
-                user.password = resultSet.getString(password);*/
+                user=new User();
+                user.NOMBRE=resultSet.getString("NOMBRE");
+                user.EMAIL=resultSet.getString("EMAIL");
+                user.CELULAR=resultSet.getString("CELULAR");
+                user.DIRECCION=resultSet.getString("DIRECCION");
+                user.CONTRASEÑA=resultSet.getString("CONTRASEÑA");
             }
 
+            stmt.close();
+            conn.close();
+
         }catch(Exception e){
+            System.out.println("error de...");
             e.printStackTrace();
         }
 
         return user;
     }
+
+
+    public static void main(String[] args) {
+        LoginForm loginForm=new LoginForm(null);
+        User user =loginForm.user;
+
+        if(user!=null){
+            System.out.println("Autenticacion correcta:"+user.NOMBRE);
+            System.out.println("email: "+user.EMAIL);
+            //System.out.println("celular: "+user.celular);
+            System.out.println("direccion: "+user.DIRECCION);
+            System.out.println("clave: "+user.CONTRASEÑA);
+        }
+        else{
+            System.out.println("Autenticacion fallida");
+        }
+    }
 }
+

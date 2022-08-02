@@ -1,10 +1,12 @@
 import javax.swing.*;
 
 public class User extends JDialog {
-    public String nombre;
-    public String email;
-    public String direccion;
-    public String password;
+    public String NOMBRE;
+    public String EMAIL;
+    public String DIRECCION;
+    public String CELULAR;
+
+    public String CONTRASEÑA;
 
 
 
