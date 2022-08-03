@@ -30,6 +30,10 @@ public class LoginForm extends JDialog{
                 System.out.println("boton ok");
                 user=getAuthenticationUser(email,password);
 
+                v2 ventana2 = new v2();
+                ventana2.setVisible(true);
+                dispose();
+
                 if (user!=null){
                     dispose();
                 }
@@ -59,8 +63,8 @@ public class LoginForm extends JDialog{
     private User getAuthenticationUser(String email, String password){
         User user =null;
 
-        final String DB_URL="jdbc:mysql://%@/farmacia?serverTimezone=UTC";
-        final String USERNAME="cualquiera";
+        final String DB_URL="jdbc:mysql://localhost/farmacia?serverTimezone=UTC";
+        final String USERNAME="root";
         final String PASSWORD="";
 
 
