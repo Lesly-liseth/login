@@ -1,7 +1,7 @@
 
-Login de Farmacia 
+# Login de Farmacia 
 
-Integrantes: 
+## Integrantes: 
 
 * Herrera Lesly
 * Ñaupari Mayra
