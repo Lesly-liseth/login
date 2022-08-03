@@ -19,12 +19,5 @@
 ![Login del programa ](https://user-images.githubusercontent.com/108675669/182658158-0816492e-fb26-47aa-8bae-bae6e4c55998.png)
 
 
-### 3. Muestra la información del producto **_información del producto_**
-
-
-### 4. Base de datos de los productos  **_todos los datos registrados en la base datos _**
-
-
-
 
 
