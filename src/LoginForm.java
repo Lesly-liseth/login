@@ -30,6 +30,10 @@ public class LoginForm extends JDialog{
                 System.out.println("boton ok");
                 user=getAuthenticationUser(email,password);
 
+                v2 ventana2 = new v2();
+                ventana2.setVisible(true);
+                dispose();
+
                 if (user!=null){
                     dispose();
                 }

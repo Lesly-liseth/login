@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b147a2e8-3441-41cc-af9d-58081bde665f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FELIZ.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/v2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/v2.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/v2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/v2.java" afterDir="false" />
     </list>
@@ -48,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pamelibiris\Downloads\clases (1)\clases\login\src" />
       <recent name="C:\Users\Pamelibiris\OneDrive - Escuela Politécnica Nacional\Documentos\JAVA\login" />
       <recent name="C:\Users\Pamelibiris\OneDrive - Escuela Politécnica Nacional\Documentos\JAVA\login\src" />
     </key>
@@ -79,7 +80,7 @@
       <workItem from="1659459331572" duration="1678000" />
       <workItem from="1659461082817" duration="618000" />
       <workItem from="1659533677382" duration="77000" />
-      <workItem from="1659540012081" duration="707000" />
+      <workItem from="1659540012081" duration="1320000" />
     </task>
     <servers />
   </component>
@@ -99,5 +100,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LoginForm.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LoginForm.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
