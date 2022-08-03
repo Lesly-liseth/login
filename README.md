@@ -6,7 +6,7 @@
 * Herrera Lesly
 * Ñaupari Mayra
 * Lesly Herrera 
-* Carlos Jurado 
+* Carlos Jurado @csjurado
 
 ### 1. Pantalla principal muestra el inicio del programa **_pide los datos_** 🖥
 
