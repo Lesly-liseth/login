@@ -16,6 +16,6 @@
 
 ![LOGIN CON DATOS INGRESADOS](../c24b8b9d-6035-45fb-b56d-8efffd0c8ca4.jpg)
 
-### 3. Pantalla principal muestra el inicio del programa **_pide los datos_** 🖥
+### 3. Pantalla que se va a desplazar luego del login **_pide los datos_** 🖥
 
 ![ Pantalla de inicio ](https://user-images.githubusercontent.com/108675669/182657746-4eadbc02-acf7-43d0-b02c-4f19dce423b4.png)
