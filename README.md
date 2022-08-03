@@ -8,7 +8,7 @@
 * Lesly Herrera 
 * Carlos Jurado 
 
-1. Login (pantalla de inicio) **pide los datos**
+1. Login (pantalla de inicio) **_pide los datos_**
 
 
 
